@@ -16,6 +16,8 @@ func main() {
 
 	// Routes
 	r.HandleFunc("/", HomeHandler)
+
+	// API Test Routes
 	r.HandleFunc("/healthz", HealthHandler)
 	r.HandleFunc("/error", ErrorHandler)
 
@@ -29,7 +31,7 @@ func main() {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Home Page?")
+	fmt.Fprintf(w, "Home Page? Hello there!")
 }
 
 func HealthHandler(w http.ResponseWriter, r *http.Request) {
